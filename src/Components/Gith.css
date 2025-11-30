@@ -1,0 +1,255 @@
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #1e1e2f;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+}
+
+/*  Container  */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -40px;
+}
+
+/*  Search Section  */
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.search input {
+    height: 2.3rem;
+    width: 20rem;
+    border: none;
+    border-radius: 1rem;
+    padding-left: 30px;
+    font-size: 1.1rem;
+}
+
+.search input::placeholder {
+    padding-left: 7px;
+}
+
+.search button {
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: none;
+    background-color: #2da44e;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+    background-color: #0356b6;
+}
+
+/*  Profile Box  */
+.box {
+    background-color: #2d2d44;
+    width: 40vw;
+    min-width: 300px;
+    height: auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/*  Profile */
+.image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.image img:hover {
+    border: 2px solid blue;
+}
+
+/*  Basic Information  */
+.username {
+    margin-left: 160px;
+    margin-top: 40px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.name a {
+    margin-left: 160px;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+}
+
+.bio {
+    margin-left: 160px;
+    margin-top: 10px;
+    max-width: 20rem;
+}
+
+.joined {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    font-size: 1rem;
+    font-family: fangsong;
+}
+
+/*  Stats (Followers, Following, Repo)  */
+.lowerinfo {
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 5rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+}
+
+.following,
+.followers,
+.repository {
+    text-align: center;
+}
+
+/*  Social & Extra Info  */
+.personinfo {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.id {
+    display: flex;
+    gap: 2rem;
+    margin-top: 20px;
+}
+
+.twitterid a,
+.gitid a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 8px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 1rem;
+}
+
+/*  RESPONSIVE DESIGN */
+
+/*  Tablets (max-width: 992px)  */
+@media (max-width: 992px) {
+    .box {
+        width: 60vw;
+    }
+}
+
+/*  Mobile Large (max-width: 768px)  */
+@media (max-width: 768px) {
+    
+    .heading {
+        font-size: 2rem;
+    }
+
+    .search input {
+        width: 90%;
+    }
+
+    .box {
+        width: 80vw;
+        padding-bottom: 20px;
+    }
+
+    .image img {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 10px;
+    }
+
+    .username, .name a, .bio {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .joined {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .lowerinfo {
+        width: 100%;
+        gap: 2rem;
+        margin-top: 20px;
+    }
+
+    .personinfo {
+        justify-content: center;
+    }
+
+    .id {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/*  Small Mobile (max-width: 480px)  */
+@media (max-width: 480px) {
+
+    .heading {
+        font-size: 1.7rem;
+    }
+
+    .search button {
+        width: 80px;
+        font-size: 0.9rem;
+    }
+
+    .lowerinfo {
+        gap: 1.5rem;
+    }
+
+    .twitterid a,
+    .gitid a {
+        width: auto;
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 780px) {
+  .search input {
+    width: 70%;
+ position: relative;
+  }
+
+  .search button {
+    width: auto;
+    padding: 10px 15px;
+  }
+}
+
