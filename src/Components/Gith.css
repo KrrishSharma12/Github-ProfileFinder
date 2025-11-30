@@ -117,7 +117,7 @@ body {
 
 /*  Stats (Followers, Following, Repo)  */
 .lowerinfo {
-    margin-top: 40px;
+    margin-top: 80px;
     background-color: rgba(0, 0, 0, 0.3);
     height: 5rem;
     border-radius: 10px;
