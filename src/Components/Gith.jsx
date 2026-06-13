@@ -47,8 +47,8 @@ const Gith = () => {
                 
                 </div>
                 </form>
-                <div className="box">
-                    {errors && (<p>{errors.message}</p>)}
+                {errors && (<p className="error">{errors.message}</p>)}
+                <div className={`box ${profileData ? 'visible' : ''}`} aria-hidden={!profileData}>
                     {profileData && (<>
                         <div className="upperinfo">
                             <div className="image"><img src={profileData.avatar_url} alt="" /></div>
@@ -79,7 +79,6 @@ const Gith = () => {
                             </div>
                         </div>
                     </>)}
-
 
                 </div>
             </div>
